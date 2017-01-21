@@ -8,25 +8,6 @@
                 <condition id="-2" name="On start of layout" sid="366740324654467" type="System" />
             </conditions>
             <actions />
-            <sub-events>
-                <event-block sid="151346934624204">
-                    <conditions>
-                        <condition id="-10" name="For" sid="530698436740053" type="System">
-                            <param id="0" name="Name">&quot;Hearts&quot;</param>
-                            <param id="1" name="Start index">1</param>
-                            <param id="2" name="End index">Player.maxLlife</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="947192357896566" type="System">
-                            <param id="0" name="Object to create">Heart</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="X">10 + loopindex</param>
-                            <param id="3" name="Y">20</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

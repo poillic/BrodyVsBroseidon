@@ -19,6 +19,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -134,13 +135,24 @@
             </object-type>
             <object-type name="Sprite" sid="819798753687813">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="8Direction" sid="180914768358291">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="354864823455797">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="263406724175579">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373185846101023" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Genes\OneDrive\Images\BRODY\brody.png">
                             <image-point name="head" x="0.512931" y="0.127737" />
                             <image-point name="legs" x="0.439655" y="0.718978" />
                             <image-point name="lhand" x="1.23276" y="0.507299" />
-                            <image-point name="hand" x="-0.24569" y="0.434307" />
+                            <image-point name="hand" x="-0.137931" y="0.430657" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -152,17 +164,6 @@
                     <instance-variable name="Gun" sid="314965587991485" type="number" />
                     <instance-variable name="currentLife" sid="837815603457598" type="number" />
                 </instance-variables>
-                <behaviors>
-                    <behavior-type name="8Direction" sid="174917056448741">
-                        <behavior id="EightDir" />
-                    </behavior-type>
-                    <behavior-type name="ScrollTo" sid="647226392254347">
-                        <behavior id="scrollto" />
-                    </behavior-type>
-                    <behavior-type name="BoundToLayout" sid="615959494450465">
-                        <behavior id="bound" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="583132850545414" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -204,7 +205,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="151053113480386" speed="5">
+                    <animation framecount="2" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="151053113480386" speed="5">
                         <frame duration="1" hotspotX="0.525745" hotspotY="0.0133333">
                             <collision-poly>
                                 <point x="0.311653" y="0.106667" />
@@ -228,7 +229,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455554734384514" speed="5">
-                        <frame duration="1" hotspotX="0.878261" hotspotY="0.456311" original-source="C:\Users\Genes\OneDrive\Images\BRODY\BRHAND.png" />
+                        <frame duration="1" hotspotX="0.121739" hotspotY="0.456311" original-source="C:\Users\Genes\OneDrive\Images\BRODY\BRHAND.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -240,8 +248,13 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite6" sid="600066052616772">
+            <object-type name="Target" sid="600066052616772">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="593477094960266">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320165049615389" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -266,6 +279,10 @@
             </object-type>
             <object-type name="pichon" sid="391358646238802">
                 <plugin id="Sprite" />
+                <container>
+                    <type>pichon</type>
+                    <type>pichongun</type>
+                </container>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177563594831348" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="C:\Users\Genes\OneDrive\Images\BRODY\pichon.png">
@@ -287,9 +304,19 @@
             </object-type>
             <object-type name="pichongun" sid="277135867699903">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="675055225085571">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>pichon</type>
+                    <type>pichongun</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892010449709546" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Genes\OneDrive\Images\BRODY\pichongun.png">
+                            <image-point name="Imagepoint 1" x="0.301829" y="0.375912" />
                             <collision-poly>
                                 <point x="0.121951" y="0.145985" />
                                 <point x="0.5" y="0.335766" />
@@ -401,11 +428,33 @@
         <object-type name="Function" sid="385953859261747">
             <plugin id="Function" />
         </object-type>
+        <object-type name="Sprite7" sid="916185216507606">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877562915713523" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyBullet" sid="947896117534545">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="296618697272710">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271076999426010" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="221469059495554">
             <members>
                 <member>Kreb</member>
+                <member>pichon</member>
             </members>
             <instance-variables>
                 <instance-variable name="Life" sid="631890221308181" type="number" />
@@ -422,6 +471,7 @@
     </families>
     <layout-folder>
         <layout>Game.xml</layout>
+        <layout>GameOver.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Enemies">
@@ -432,6 +482,7 @@
         <event-sheet>Weapons.xml</event-sheet>
         <event-sheet>Spawner.xml</event-sheet>
         <event-sheet>UI.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

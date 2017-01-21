@@ -27,8 +27,8 @@
                     <param id="2" name="Image point">1</param>
                 </action>
                 <action id="-22" name="Set angle toward position" sid="443965202131664" type="Bullet">
-                    <param id="0" name="X">Sprite6.X</param>
-                    <param id="1" name="Y">Sprite6.Y</param>
+                    <param id="0" name="X">Target.X</param>
+                    <param id="1" name="Y">Target.Y</param>
                 </action>
                 <action id="-18" name="Rotate clockwise" sid="892147929531414" type="Bullet">
                     <param id="0" name="Degrees">random(-5, 5)</param>
@@ -59,6 +59,35 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="103349999852898" type="Enemies" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="525178043884084">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="385269309535889" type="Castle">
+                    <param id="0" name="Object">Kreb</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="637629190048102" type="Castle">
+                    <param id="0" name="Instance variable">Life</param>
+                    <param id="1" name="Value">Self.Life - 1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="346243968082092">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="964934319718013" type="Castle">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="737141242016255" type="System">
+                            <param id="0" name="Layout">GameOver</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

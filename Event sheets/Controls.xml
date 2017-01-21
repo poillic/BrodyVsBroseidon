@@ -8,6 +8,66 @@
         <include>Spawner</include>
         <include>Weapons</include>
         <comment>CONTROLS</comment>
+        <event-block sid="962779915913633">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="284758324183955" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">2</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="566673588498781" type="Sprite">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="799312475811000" type="Sprite2">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="190798733651185" type="Sprite5">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="427307104805026" type="Sprite3">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="598418186145868" type="Gun">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="8" name="Set flipped" sid="557413773500868" type="Sprite4">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="219259609469641">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="696931988457772" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">2</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="819965156033545" type="Sprite">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="927577270693324" type="Sprite2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="383252984430962" type="Sprite5">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="915502966674737" type="Sprite3">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="8" name="Set flipped" sid="633936489592256" type="Gun">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="901765987677867" type="Sprite4">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block any="1" sid="256506667993311">
             <conditions>
                 <condition id="2" name="Key is down" sid="454714553232353" type="Keyboard">
@@ -21,7 +81,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="688804495097795" type="Player">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="482253771196169" type="Sprite">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
@@ -39,7 +99,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="764106203641791" type="Player">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="273032570202295" type="Sprite">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
@@ -57,15 +117,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="978638806558328" type="Player">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="537638506369966" type="Sprite">
                     <param id="0" name="Control">2</param>
-                </action>
-                <action id="4" name="Set animation" sid="401384338906593" type="Player">
-                    <param id="0" name="Animation">&quot;Back&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="165770086047897" type="Player">
-                    <param id="0" name="State">0</param>
                 </action>
                 <action id="-25" name="Move to bottom" sid="711215420922212" type="Gun" />
             </actions>
@@ -83,15 +136,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="622516759478759" type="Player">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="361647056637086" type="Sprite">
                     <param id="0" name="Control">3</param>
-                </action>
-                <action id="4" name="Set animation" sid="287971220477916" type="Player">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="233520189887235" type="Player">
-                    <param id="0" name="State">1</param>
                 </action>
                 <action id="-24" name="Move to top" sid="624000102374413" type="Gun" />
             </actions>
@@ -131,13 +177,12 @@
                 <action id="-8" name="Set angle" sid="309256729378788" type="Player">
                     <param id="0" name="Angle">0</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="258467192832807" type="Gun">
-                    <param id="0" name="Object">Player</param>
-                    <param id="1" name="Image point (optional)">1</param>
+                <action id="-8" name="Set angle" sid="965145350035934" type="Sprite">
+                    <param id="0" name="Angle">0</param>
                 </action>
-                <action id="-22" name="Set angle toward position" sid="728401428351774" type="Gun">
-                    <param id="0" name="X">Mouse.X</param>
-                    <param id="1" name="Y">Mouse.Y</param>
+                <action id="-4" name="Set position to another object" sid="258467192832807" type="Gun">
+                    <param id="0" name="Object">Sprite4</param>
+                    <param id="1" name="Image point (optional)">0</param>
                 </action>
                 <action id="-4" name="Set position to another object" sid="558412360930073" type="Sprite2">
                     <param id="0" name="Object">Sprite</param>
@@ -155,9 +200,100 @@
                     <param id="0" name="Object">Sprite</param>
                     <param id="1" name="Image point (optional)">03</param>
                 </action>
-                <action id="-3" name="Set position" sid="370756253395164" type="Sprite6">
-                    <param id="0" name="X">Mouse.X</param>
-                    <param id="1" name="Y">Mouse.Y</param>
+            </actions>
+            <sub-events>
+                <event-block sid="494315844541564">
+                    <conditions>
+                        <condition id="4" name="Has gamepads" sid="677076138152887" type="Gamepad" />
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="924740822070539" type="Gun">
+                            <param id="0" name="X">Target.X</param>
+                            <param id="1" name="Y">Target.Y</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="624599808108297" type="Sprite4">
+                            <param id="0" name="X">Target.X</param>
+                            <param id="1" name="Y">Target.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="917834842536689" type="Target">
+                            <param id="0" name="X">Sprite.X + Gamepad.Axis(0,2)/100*150</param>
+                            <param id="1" name="Y">Sprite.Y  + Gamepad.Axis(0,3)/100*150</param>
+                        </action>
+                        <action behavior="ScrollTo" disabled="1" id="1" name="Set enabled" sid="615971695333609" type="Sprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="ScrollTo" disabled="1" id="1" name="Set enabled" sid="955213613501812" type="Target">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="135062909051410">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="765506531890759" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="370756253395164" type="Target">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="459742912727813" type="Sprite4">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                        <action disabled="1" id="-22" name="Set angle toward position" sid="728401428351774" type="Gun">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="288740831824171">
+            <conditions>
+                <condition id="0" name="On click" sid="575657642228862" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="468493410971918">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="513837846695081" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="708350294691838" type="Function">
+                            <param id="0" name="Name">&quot;Shoot&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="593970993141993">
+            <conditions>
+                <condition behavior="8Direction" id="0" name="Is moving" sid="113436184218305" type="Sprite" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="525685960865686" type="Sprite3">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="785906113755352">
+            <conditions>
+                <condition behavior="8Direction" id="1" name="Compare speed" sid="768200439918882" type="Sprite">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="383585260647037" type="Sprite3">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

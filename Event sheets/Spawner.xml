@@ -6,7 +6,7 @@
         <event-block sid="815506009707687">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="716021573956147" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
+                    <param id="0" name="Interval (seconds)">2</param>
                 </condition>
             </conditions>
             <actions>
@@ -21,13 +21,13 @@
                     <param id="3" name="Y">800 + sin(rnd)*1000</param>
                 </action>
                 <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="103146913595328" type="Kreb">
-                    <param id="0" name="Acceleration">800</param>
+                    <param id="0" name="Acceleration">500</param>
                     <param id="1" name="X">Castle.X</param>
                     <param id="2" name="Y">Castle.Y</param>
                 </action>
                 <action behavior="CustomMovement" id="2" name="Set speed" sid="857800051306905" type="Kreb">
                     <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">300</param>
+                    <param id="1" name="Speed">100</param>
                 </action>
             </actions>
         </event-block>
@@ -39,6 +39,48 @@
                 <action id="-10" name="Set value" sid="354102866849980" type="Kreb">
                     <param id="0" name="Instance variable">Life</param>
                     <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="961961108763653">
+            <conditions>
+                <condition id="-18" name="On created" sid="116369959280419" type="pichon" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="671342943655912" type="pichongun">
+                    <param id="0" name="Object">pichon</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="670624590276012" type="pichongun">
+                    <param id="0" name="Pin to">pichon</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="596000735028935">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="777783764090714" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="520274661174400" type="pichongun">
+                            <param id="0" name="Object">EnemyBullet</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="869025809552206">
+            <conditions>
+                <condition id="-18" name="On created" sid="668585222410132" type="EnemyBullet" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="397094985814349" type="EnemyBullet">
+                    <param id="0" name="X">Sprite.X + Sprite.8Direction.VectorX</param>
+                    <param id="1" name="Y">Player.Y+ Sprite.8Direction.VectorY</param>
                 </action>
             </actions>
         </event-block>
