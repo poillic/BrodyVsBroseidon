@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Weapons</name>
+    <events>
+        <event-block any="1" sid="175303422024547">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="798228151506418" type="Bullet">
+                    <param id="0" name="Object">Castle</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="753176886547275" type="Bullet">
+                    <param id="0" name="Object">Boundaries</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="159101739890729" type="Bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="873513538580822">
+            <conditions>
+                <condition id="0" name="On function" sid="941558598629235" type="Function">
+                    <param id="0" name="Name">&quot;Shoot&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="164453303056118" type="Gun">
+                    <param id="0" name="Object">Bullet</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="443965202131664" type="Bullet">
+                    <param id="0" name="X">Sprite6.X</param>
+                    <param id="1" name="Y">Sprite6.Y</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="892147929531414" type="Bullet">
+                    <param id="0" name="Degrees">random(-5, 5)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
