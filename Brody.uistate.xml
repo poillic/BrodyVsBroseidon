@@ -34,7 +34,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/UI/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/Enemies/" />
+        <folder expanded="0" path="event-folder/Enemies/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -55,9 +55,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/brodysurf/" />
         <folder expanded="1" path="animation-folder/wave/" />
         <folder expanded="1" path="animation-folder/Kreb/" />
+<<<<<<< HEAD
+        <folder expanded="1" path="animation-folder/Heart/" />
+=======
         <folder expanded="1" path="animation-folder/pichon/" />
         <folder expanded="1" path="animation-folder/pichongun/" />
         <folder expanded="1" path="animation-folder/Sprite7/" />
+>>>>>>> origin/master
         <folder expanded="1" path="animation-folder/Bullet/" />
         <folder expanded="1" path="animation-folder/Gun/" />
         <folder expanded="1" path="animation-folder/Bkg/" />
