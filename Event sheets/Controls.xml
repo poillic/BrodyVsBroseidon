@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Controls</name>
     <events>
+        <variable constant="0" name="rnd" sid="183455713100519" static="0" type="number">0</variable>
+        <include>Spawner</include>
         <include>Weapons</include>
         <comment>CONTROLS</comment>
         <event-block any="1" sid="256506667993311">
@@ -108,7 +110,7 @@
                 <event-block sid="643368890994529">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="993925671750618" type="System">
-                            <param id="0" name="Interval (seconds)">0.1</param>
+                            <param id="0" name="Interval (seconds)">0.5</param>
                         </condition>
                     </conditions>
                     <actions>

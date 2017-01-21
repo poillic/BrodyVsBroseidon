@@ -19,6 +19,8 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -27,8 +29,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>800</width>
-        <height>600</height>
+        <width>1024</width>
+        <height>768</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -37,7 +39,7 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Crop</prop>
+        <prop name="Fullscreen in browser">Off</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
         <prop name="Orientations">Any</prop>
@@ -157,6 +159,9 @@
                     <behavior-type name="ScrollTo" sid="647226392254347">
                         <behavior id="scrollto" />
                     </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="615959494450465">
+                        <behavior id="bound" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="583132850545414" speed="5">
@@ -244,7 +249,32 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Enemies" />
+        <object-folder name="Enemies">
+            <object-type name="Kreb" sid="611378005614221">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="CustomMovement" sid="909500603818479">
+                        <behavior id="custom" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236540970418265" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="UI">
+            <object-type global="1" name="Sprite7" sid="921313926484865">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806723743427239" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Keyboard" sid="531838204356633">
             <plugin id="Keyboard" />
         </object-type>
@@ -332,7 +362,24 @@
             <plugin id="Function" />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Enemies" plugin-id="Sprite" sid="221469059495554">
+            <members>
+                <member>Kreb</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Life" sid="631890221308181" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Ammo" plugin-id="Sprite" sid="855765098109332">
+            <members>
+                <member>Bullet</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Damage" sid="906111057810140" type="number" />
+            </instance-variables>
+        </family>
+    </families>
     <layout-folder>
         <layout>Game.xml</layout>
     </layout-folder>
@@ -343,6 +390,7 @@
         <event-sheet>Controls.xml</event-sheet>
         <event-sheet>Animations.xml</event-sheet>
         <event-sheet>Weapons.xml</event-sheet>
+        <event-sheet>Spawner.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

@@ -12,9 +12,7 @@
                     <param id="0" name="Object">Boundaries</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="159101739890729" type="Bullet" />
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="873513538580822">
             <conditions>
@@ -36,6 +34,34 @@
                     <param id="0" name="Degrees">random(-5, 5)</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="813516100563622">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="478664968822555" type="Enemies">
+                    <param id="0" name="Object">Ammo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="705754755445428" type="Enemies">
+                    <param id="0" name="Instance variable">Life</param>
+                    <param id="1" name="Value">Self.Life - Ammo.Damage</param>
+                </action>
+                <action id="-9" name="Destroy" sid="324180628246627" type="Ammo" />
+            </actions>
+            <sub-events>
+                <event-block sid="482116411551306">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="995354626526707" type="Enemies">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="103349999852898" type="Enemies" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
