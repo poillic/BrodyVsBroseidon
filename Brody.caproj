@@ -248,6 +248,139 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="brgun" sid="568676304971235">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969163093795198" speed="5">
+                        <frame duration="1" hotspotX="0.848375" hotspotY="0.639216" original-source="C:\Users\Genes\OneDrive\Images\BRODY\brgun1.png">
+                            <collision-poly>
+                                <point x="0.133574" y="0.145098" />
+                                <point x="0.498195" y="0.113725" />
+                                <point x="0.880866" y="0.129412" />
+                                <point x="0.945848" y="0.498039" />
+                                <point x="0.960289" y="0.956863" />
+                                <point x="0.498195" y="0.690196" />
+                                <point x="0.285199" y="0.690196" />
+                                <point x="0.0794224" y="0.498039" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Castle" sid="193786418707153">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Life" sid="693835027431240" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="176315399060731">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918885728816573" speed="5">
+                        <frame duration="1" hotspotX="0.500412" hotspotY="0.500332" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle1.png" />
+                        <frame duration="1" hotspotX="0.500412" hotspotY="0.500332" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle2.png" />
+                        <frame duration="1" hotspotX="0.500412" hotspotY="0.500332" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle3.png" />
+                        <frame duration="1" hotspotX="0.500412" hotspotY="0.500332" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle4.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="warning" sid="728132339995418">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555276453354602" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500768" original-source="C:\Users\Genes\OneDrive\Images\BRODY\warning.png">
+                            <collision-poly>
+                                <point x="0.102564" y="0.221198" />
+                                <point x="0.5" y="0.0491551" />
+                                <point x="0.883191" y="0.25192" />
+                                <point x="0.980769" y="0.499232" />
+                                <point x="0.862536" y="0.703533" />
+                                <point x="0.5" y="0.900154" />
+                                <point x="0.0569801" y="0.877112" />
+                                <point x="0.0249288" y="0.499232" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="mash" sid="748322881437712">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397573022419837" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501292" original-source="C:\Users\Genes\OneDrive\Images\BRODY\mash.png">
+                            <collision-poly>
+                                <point x="0.308046" y="0.692506" />
+                                <point x="0.5" y="0.325581" />
+                                <point x="0.854023" y="0.328165" />
+                                <point x="0.696552" y="0.498708" />
+                                <point x="0.814943" y="0.583979" />
+                                <point x="0.5" y="0.749354" />
+                                <point x="0.045977" y="0.896641" />
+                                <point x="0.091954" y="0.498708" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="mashA" sid="826973698513669">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="808632303745743" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Genes\OneDrive\Images\BRODY\mashA1.png">
+                            <collision-poly>
+                                <point x="0.240826" y="0.244186" />
+                                <point x="0.5" y="0.139535" />
+                                <point x="0.752294" y="0.251163" />
+                                <point x="0.848624" y="0.5" />
+                                <point x="0.75" y="0.746512" />
+                                <point x="0.5" y="0.85814" />
+                                <point x="0.243119" y="0.753488" />
+                                <point x="0.137615" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Genes\OneDrive\Images\BRODY\mashA2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="brodysurf" sid="592928488910393">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="657922619142423" speed="5">
+                        <frame duration="1" hotspotX="0.500458" hotspotY="0.500541" original-source="C:\Users\Genes\OneDrive\Images\BRODY\brodysurf.png">
+                            <collision-poly>
+                                <point x="0.310724" y="0.366486" />
+                                <point x="0.499542" y="0.0767568" />
+                                <point x="0.826764" y="0.204324" />
+                                <point x="0.799267" y="0.499459" />
+                                <point x="0.893676" y="0.874595" />
+                                <point x="0.499542" y="1" />
+                                <point x="0.0733272" y="0.913514" />
+                                <point x="0.145738" y="0.499459" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="wave" sid="167378446241764">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="957667659165658" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Genes\OneDrive\Images\BRODY\wave.png">
+                            <collision-poly>
+                                <point x="0.04125" y="0.0580986" />
+                                <point x="0.5" y="0.0422535" />
+                                <point x="0.9525" y="0.0669014" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Enemies">
             <object-type name="Kreb" sid="611378005614221">
@@ -361,30 +494,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Castle" sid="193786418707153">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Life" sid="693835027431240" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Solid" sid="176315399060731">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918885728816573" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.32" y="0.415" />
-                            <point x="0.625" y="0.4275" />
-                            <point x="0.97" y="0.94" />
-                            <point x="0.5" y="0.9175" />
-                            <point x="0.0175" y="0.9525" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Boundaries" sid="504004112839774">
             <plugin id="Sprite" />
             <behaviors>
@@ -422,6 +531,7 @@
     </families>
     <layout-folder>
         <layout>Game.xml</layout>
+        <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Enemies">
@@ -431,6 +541,7 @@
         <event-sheet>Animations.xml</event-sheet>
         <event-sheet>Weapons.xml</event-sheet>
         <event-sheet>Spawner.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

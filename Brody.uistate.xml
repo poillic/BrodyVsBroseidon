@@ -10,11 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="2">Game</layout>
-        <event-sheet order="3">Controls</event-sheet>
-        <event-sheet order="4">Animations</event-sheet>
-        <event-sheet order="5">Weapons</event-sheet>
-        <event-sheet order="6">Spawner</event-sheet>
+        <layout active="1" order="0">Game</layout>
+        <layout order="5">Layout 1</layout>
+        <event-sheet order="1">Controls</event-sheet>
+        <event-sheet order="2">Animations</event-sheet>
+        <event-sheet order="3">Weapons</event-sheet>
+        <event-sheet order="4">Spawner</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -46,6 +47,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite4/" />
         <folder expanded="1" path="animation-folder/Sprite5/" />
         <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/brgun/" />
+        <folder expanded="1" path="animation-folder/Castle/" />
+        <folder expanded="1" path="animation-folder/warning/" />
+        <folder expanded="1" path="animation-folder/mash/" />
+        <folder expanded="1" path="animation-folder/mashA/" />
+        <folder expanded="1" path="animation-folder/brodysurf/" />
+        <folder expanded="1" path="animation-folder/wave/" />
         <folder expanded="1" path="animation-folder/Kreb/" />
         <folder expanded="1" path="animation-folder/pichon/" />
         <folder expanded="1" path="animation-folder/pichongun/" />
@@ -53,7 +61,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Bullet/" />
         <folder expanded="1" path="animation-folder/Gun/" />
         <folder expanded="1" path="animation-folder/Bkg/" />
-        <folder expanded="1" path="animation-folder/Castle/" />
         <folder expanded="1" path="animation-folder/Boundaries/" />
     </folders-expanded>
 </c2uistate>
