@@ -265,7 +265,7 @@
             </object-type>
         </object-folder>
         <object-folder name="UI">
-            <object-type global="1" name="Sprite7" sid="921313926484865">
+            <object-type global="1" name="Heart" sid="921313926484865">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806723743427239" speed="0">
@@ -391,6 +391,7 @@
         <event-sheet>Animations.xml</event-sheet>
         <event-sheet>Weapons.xml</event-sheet>
         <event-sheet>Spawner.xml</event-sheet>
+        <event-sheet>UI.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
