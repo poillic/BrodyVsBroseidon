@@ -48,6 +48,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite4/" />
         <folder expanded="1" path="animation-folder/Sprite5/" />
         <folder expanded="1" path="animation-folder/Target/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/brgun/" />
+        <folder expanded="1" path="animation-folder/Castle/" />
+        <folder expanded="1" path="animation-folder/warning/" />
+        <folder expanded="1" path="animation-folder/mash/" />
+        <folder expanded="1" path="animation-folder/mashA/" />
+        <folder expanded="1" path="animation-folder/brodysurf/" />
+        <folder expanded="1" path="animation-folder/wave/" />
         <folder expanded="1" path="animation-folder/Kreb/" />
         <folder expanded="1" path="animation-folder/pichon/" />
         <folder expanded="1" path="animation-folder/pichongun/" />
@@ -55,7 +63,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Bullet/" />
         <folder expanded="1" path="animation-folder/Gun/" />
         <folder expanded="1" path="animation-folder/Bkg/" />
-        <folder expanded="1" path="animation-folder/Castle/" />
         <folder expanded="1" path="animation-folder/Boundaries/" />
         <folder expanded="1" path="animation-folder/Sprite7/" />
         <folder expanded="1" path="animation-folder/EnemyBullet/" />
