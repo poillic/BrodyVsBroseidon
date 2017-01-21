@@ -10,12 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Game</layout>
-        <event-sheet order="1">Controls</event-sheet>
-        <event-sheet order="2">Animations</event-sheet>
-        <event-sheet order="3">Weapons</event-sheet>
-        <event-sheet active="1" order="4">Spawner</event-sheet>
-        <event-sheet order="5">UI</event-sheet>
+        <layout active="1" order="2">Game</layout>
+        <event-sheet order="3">Controls</event-sheet>
+        <event-sheet order="4">Animations</event-sheet>
+        <event-sheet order="5">Weapons</event-sheet>
+        <event-sheet order="6">Spawner</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -48,7 +47,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite5/" />
         <folder expanded="1" path="animation-folder/Sprite6/" />
         <folder expanded="1" path="animation-folder/Kreb/" />
+<<<<<<< HEAD
         <folder expanded="1" path="animation-folder/Heart/" />
+=======
+        <folder expanded="1" path="animation-folder/pichon/" />
+        <folder expanded="1" path="animation-folder/pichongun/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+>>>>>>> origin/master
         <folder expanded="1" path="animation-folder/Bullet/" />
         <folder expanded="1" path="animation-folder/Gun/" />
         <folder expanded="1" path="animation-folder/Bkg/" />

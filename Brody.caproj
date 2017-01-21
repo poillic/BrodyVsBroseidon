@@ -258,8 +258,48 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236540970418265" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236540970418265" speed="5">
+                        <frame duration="1" hotspotX="0.501114" hotspotY="0.501348" original-source="C:\Users\Genes\OneDrive\Images\BRODY\Kreb.png" />
+                        <frame duration="1" hotspotX="0.501114" hotspotY="0.501348" original-source="C:\Users\Genes\OneDrive\Images\BRODY\Kreb2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pichon" sid="391358646238802">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177563594831348" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="C:\Users\Genes\OneDrive\Images\BRODY\pichon.png">
+                            <image-point name="hand" x="0.0968858" y="0.662441" />
+                            <collision-poly>
+                                <point x="0.283737" y="0.259905" />
+                                <point x="0.5" y="0.0174326" />
+                                <point x="0.709343" y="0.266244" />
+                                <point x="0.768166" y="0.499208" />
+                                <point x="0.83564" y="0.849445" />
+                                <point x="0.5" y="0.881141" />
+                                <point x="0.352941" y="0.676704" />
+                                <point x="0.0397924" y="0.499208" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="C:\Users\Genes\OneDrive\Images\BRODY\pichon2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pichongun" sid="277135867699903">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892010449709546" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Genes\OneDrive\Images\BRODY\pichongun.png">
+                            <collision-poly>
+                                <point x="0.121951" y="0.145985" />
+                                <point x="0.5" y="0.335766" />
+                                <point x="0.682927" y="0.379562" />
+                                <point x="0.847561" y="0.5" />
+                                <point x="0.948171" y="0.937956" />
+                                <point x="0.5" y="0.616788" />
+                                <point x="0.192073" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
