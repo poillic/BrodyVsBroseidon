@@ -3,17 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Weapons</name>
     <events>
-        <event-block any="1" sid="175303422024547">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="798228151506418" type="Bullet">
-                    <param id="0" name="Object">Castle</param>
-                </condition>
-                <condition id="0" name="On collision with another object" sid="753176886547275" type="Bullet">
-                    <param id="0" name="Object">Boundaries</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
         <event-block sid="873513538580822">
             <conditions>
                 <condition id="0" name="On function" sid="941558598629235" type="Function">
@@ -46,6 +35,15 @@
                     <param id="0" name="Instance variable">Life</param>
                     <param id="1" name="Value">Self.Life - Ammo.Damage</param>
                 </action>
+                <action behavior="Flash" id="0" name="Flash" sid="724785179384149" type="Enemies">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.5</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="860739279488934" type="Enemies">
+                    <param id="0" name="Angle">angle(Ammo.X, Ammo.Y, Enemies.X, Enemies.Y)</param>
+                    <param id="1" name="Distance">50</param>
+                </action>
                 <action id="-9" name="Destroy" sid="324180628246627" type="Ammo" />
             </actions>
             <sub-events>
@@ -72,10 +70,49 @@
             <actions>
                 <action id="-10" name="Set value" sid="637629190048102" type="Castle">
                     <param id="0" name="Instance variable">Life</param>
-                    <param id="1" name="Value">Self.Life - 1</param>
+                    <param id="1" name="Value">Self.Life - 2</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="640163106076937" type="Castle">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="856912407637633" type="Kreb" />
+                <action behavior="ScrollTo" id="0" name="Shake" sid="357997450257093" type="Sprite">
+                    <param id="0" name="Magnitude">50</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="832623474032899">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="989166140789186" type="Castle">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="139729192049593" type="Castle">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="700528045439038">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="478220194643085" type="Castle">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="332827325916368" type="Castle">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="346243968082092">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="964934319718013" type="Castle">
@@ -85,12 +122,46 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="5" name="Set frame" sid="425430470563233" type="Castle">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="270382761486483" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="737141242016255" type="System">
                             <param id="0" name="Layout">GameOver</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="184122849191845">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="921512482720556" type="Sprite">
+                    <param id="0" name="Object">Enemies</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="324313606311421" type="Sprite2">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="531109733970630" type="Sprite">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="275602683114455" type="Sprite">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="469560399517978" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="262366209021958" type="Sprite">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

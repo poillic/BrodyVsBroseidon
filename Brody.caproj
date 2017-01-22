@@ -10,15 +10,18 @@
     <unique-id>den8tjr1cmak</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
@@ -145,6 +148,9 @@
                     <behavior-type name="ScrollTo" sid="263406724175579">
                         <behavior id="scrollto" />
                     </behavior-type>
+                    <behavior-type name="Flash" sid="947475446030309">
+                        <behavior id="Flash" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373185846101023" speed="5">
@@ -179,6 +185,11 @@
             </object-type>
             <object-type name="Sprite2" sid="583849527238843">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="288615697471707">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388066094044511" speed="5">
                         <frame duration="1" hotspotX="0.413699" hotspotY="0.884956" original-source="C:\Users\Genes\OneDrive\Images\BRODY\BRHEAD.png">
@@ -289,13 +300,44 @@
                     <behavior-type name="Solid" sid="176315399060731">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Flash" sid="517324239697182">
+                        <behavior id="Flash" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918885728816573" speed="5">
-                        <frame duration="1" hotspotX="0.500412" hotspotY="0.500332" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle1.png" />
-                        <frame duration="1" hotspotX="0.500412" hotspotY="0.500332" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle2.png" />
-                        <frame duration="1" hotspotX="0.500412" hotspotY="0.500332" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle3.png" />
-                        <frame duration="1" hotspotX="0.500412" hotspotY="0.500332" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle4.png" />
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918885728816573" speed="0">
+                        <frame duration="1" hotspotX="0.49629" hotspotY="0.683056" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle1.png">
+                            <collision-poly>
+                                <point x="0.140973" y="0.575415" />
+                                <point x="0.871393" y="0.556811" />
+                                <point x="0.828524" y="0.936877" />
+                                <point x="0.182193" y="0.945515" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.49629" hotspotY="0.683056" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle2.png">
+                            <collision-poly>
+                                <point x="0.140973" y="0.575415" />
+                                <point x="0.871393" y="0.556811" />
+                                <point x="0.828524" y="0.936877" />
+                                <point x="0.182193" y="0.945515" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.49629" hotspotY="0.683056" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle3.png">
+                            <collision-poly>
+                                <point x="0.140973" y="0.575415" />
+                                <point x="0.871393" y="0.556811" />
+                                <point x="0.828524" y="0.936877" />
+                                <point x="0.182193" y="0.945515" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.49629" hotspotY="0.683056" original-source="C:\Users\Genes\OneDrive\Images\BRODY\castle4.png">
+                            <collision-poly>
+                                <point x="0.140973" y="0.575415" />
+                                <point x="0.871393" y="0.556811" />
+                                <point x="0.828524" y="0.936877" />
+                                <point x="0.182193" y="0.945515" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -558,6 +600,12 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="468168936371582">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Text" sid="778348060772910">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="221469059495554">
@@ -568,6 +616,11 @@
             <instance-variables>
                 <instance-variable name="Life" sid="631890221308181" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="415065281833480">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
         </family>
         <family name="Ammo" plugin-id="Sprite" sid="855765098109332">
             <members>
@@ -595,16 +648,32 @@
         <event-sheet>UI.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1" />
-        <global-instance type="Gamepad" uid="2">
+        <global-instance type="Keyboard" uid="5" />
+        <global-instance type="Gamepad" uid="33">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
-        <global-instance type="Mouse" uid="5" />
-        <global-instance type="Function" uid="33" />
+        <global-instance type="Mouse" uid="40" />
+        <global-instance type="Function" uid="41" />
+        <global-instance type="Audio" uid="42">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="mitrailleuse.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

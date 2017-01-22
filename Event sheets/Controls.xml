@@ -157,13 +157,18 @@
                 <event-block sid="643368890994529">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="993925671750618" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
+                            <param id="0" name="Interval (seconds)">0.4</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="483689689732849" type="Function">
                             <param id="0" name="Name">&quot;Shoot&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="275555923059764" type="Sprite">
+                            <param id="0" name="Magnitude">15</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -174,9 +179,6 @@
                 <condition id="-1" name="Every tick" sid="122124866440037" type="System" />
             </conditions>
             <actions>
-                <action id="-8" name="Set angle" sid="309256729378788" type="Player">
-                    <param id="0" name="Angle">0</param>
-                </action>
                 <action id="-8" name="Set angle" sid="965145350035934" type="Sprite">
                     <param id="0" name="Angle">0</param>
                 </action>
@@ -243,30 +245,6 @@
                         <action disabled="1" id="-22" name="Set angle toward position" sid="728401428351774" type="Gun">
                             <param id="0" name="X">Mouse.X</param>
                             <param id="1" name="Y">Mouse.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="288740831824171">
-            <conditions>
-                <condition id="0" name="On click" sid="575657642228862" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="468493410971918">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="513837846695081" type="System">
-                            <param id="0" name="Interval (seconds)">0.1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="708350294691838" type="Function">
-                            <param id="0" name="Name">&quot;Shoot&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
