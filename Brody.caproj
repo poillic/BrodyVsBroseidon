@@ -584,7 +584,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877562915713523" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Genes\OneDrive\Images\BRODY\game ogre.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -646,6 +646,54 @@
                     <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
+        </object-type>
+        <object-type name="Text3" sid="162579200706111">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text5" sid="218787748078843">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Sine" sid="381538631732121">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="BROLLET" sid="743219224690020">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="724725395706416" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503226" original-source="C:\Users\Genes\OneDrive\Images\BRODY\BROLLET.png">
+                        <collision-poly>
+                            <point x="0.259804" y="0.341935" />
+                            <point x="0.5" y="0.109677" />
+                            <point x="0.813725" y="0.245161" />
+                            <point x="0.862745" y="0.496774" />
+                            <point x="0.79902" y="0.735484" />
+                            <point x="0.5" y="0.877419" />
+                            <point x="0.22549" y="0.703226" />
+                            <point x="0.20098" y="0.496774" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HARBROON" sid="952760772782977">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495704621289496" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503704" original-source="C:\Users\Genes\OneDrive\Images\BRODY\HARBROON.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.17037" />
+                            <point x="0.745192" y="0.392593" />
+                            <point x="0.908654" y="0.496296" />
+                            <point x="0.788462" y="0.674074" />
+                            <point x="0.5" y="0.896296" />
+                            <point x="0.197115" y="0.696296" />
+                            <point x="0.182692" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
