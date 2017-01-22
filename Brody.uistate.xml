@@ -10,12 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Game</layout>
+        <layout order="0">Game</layout>
         <layout order="5">GameOver</layout>
+        <layout active="1" order="6">MENU</layout>
         <event-sheet order="1">Controls</event-sheet>
         <event-sheet order="2">Weapons</event-sheet>
         <event-sheet order="3">Spawner</event-sheet>
         <event-sheet order="4">UI</event-sheet>
+        <event-sheet order="7">Event sheet 1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,7 +30,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="Ammo" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/Sprites/" />
         <folder expanded="1" path="object-folder/Enemies/" />
         <folder expanded="1" path="object-folder/UI/" />
@@ -64,5 +66,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Boundaries/" />
         <folder expanded="1" path="animation-folder/Sprite7/" />
         <folder expanded="1" path="animation-folder/EnemyBullet/" />
+        <folder expanded="1" path="animation-folder/titlescreen/" />
+        <folder expanded="1" path="animation-folder/title/" />
     </folders-expanded>
 </c2uistate>

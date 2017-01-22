@@ -23,6 +23,7 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -606,6 +607,46 @@
         <object-type name="Text" sid="778348060772910">
             <plugin id="Text" />
         </object-type>
+        <object-type name="titlescreen" sid="280427060267427">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532701068661662" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Genes\OneDrive\Images\BRODY\titlescreen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="title" sid="795721787975209">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="445800223188536">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="334066252440582" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Genes\OneDrive\Images\BRODY\title.png">
+                        <collision-poly>
+                            <point x="0.175676" y="0.298587" />
+                            <point x="0.5" y="0.0459364" />
+                            <point x="0.889813" y="0.187279" />
+                            <point x="0.962578" y="0.5" />
+                            <point x="0.861746" y="0.765018" />
+                            <point x="0.5" y="0.946996" />
+                            <point x="0.12474" y="0.787986" />
+                            <point x="0.0862786" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="799597844810140">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Sine" sid="789534933471929">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="221469059495554">
@@ -636,6 +677,7 @@
         <layout>Game.xml</layout>
         <layout>GameOver.xml</layout>
         <layout>Layout 1.xml</layout>
+        <layout>MENU.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Enemies">
