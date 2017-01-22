@@ -3,33 +3,78 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Spawner</name>
     <events>
+        <variable constant="0" name="nbWave" sid="921765156481502" static="0" type="number">1</variable>
+        <variable constant="0" name="waveQty" sid="100648717484271" static="0" type="number">10</variable>
         <event-block sid="815506009707687">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="716021573956147" type="System">
                     <param id="0" name="Interval (seconds)">2</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="544619280290942" type="System">
-                    <param id="0" name="Variable">rnd</param>
-                    <param id="1" name="Value">random(0, 360)</param>
-                </action>
-                <action id="-3" name="Create object" sid="595302396227279" type="System">
-                    <param id="0" name="Object to create">Kreb</param>
-                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                    <param id="2" name="X">800 + cos(rnd)*1000</param>
-                    <param id="3" name="Y">800 + sin(rnd)*1000</param>
-                </action>
-                <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="103146913595328" type="Kreb">
-                    <param id="0" name="Acceleration">500</param>
-                    <param id="1" name="X">Castle.X</param>
-                    <param id="2" name="Y">Castle.Y</param>
-                </action>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="857800051306905" type="Kreb">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">100</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="453575718227675">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="830231445447565" type="System">
+                            <param id="0" name="Variable">waveQty</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="150559908632050" type="System">
+                            <param id="0" name="Variable">nbWave</param>
+                            <param id="1" name="Value">nbWave + 1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="237938363658809">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="287384232456991" type="System">
+                                    <param id="0" name="First value">nbWave % 3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="403477244634502" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="377741346229167">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="925032459053853" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="623812395477727" type="System">
+                            <param id="0" name="Variable">waveQty</param>
+                            <param id="1" name="Value">waveQty - 1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="544619280290942" type="System">
+                            <param id="0" name="Variable">rnd</param>
+                            <param id="1" name="Value">random(0, 360)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="595302396227279" type="System">
+                            <param id="0" name="Object to create">Kreb</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="X">800 + cos(rnd)*1000</param>
+                            <param id="3" name="Y">800 + sin(rnd)*1000</param>
+                        </action>
+                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="103146913595328" type="Kreb">
+                            <param id="0" name="Acceleration">500</param>
+                            <param id="1" name="X">Castle.X</param>
+                            <param id="2" name="Y">Castle.Y</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="857800051306905" type="Kreb">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="780363287282122">
             <conditions>

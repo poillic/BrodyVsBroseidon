@@ -615,6 +615,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="Life" sid="631890221308181" type="number" />
+                <instance-variable name="Points" sid="569996611765588" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Flash" sid="415065281833480">

@@ -513,6 +513,7 @@
                     </properties>
                     <instance-variables>
                         <Life>3</Life>
+                        <Points>20</Points>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
@@ -710,6 +711,7 @@
                     </properties>
                     <instance-variables>
                         <Life>3</Life>
+                        <Points>40</Points>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
@@ -1000,11 +1002,11 @@
                 </instance>
                 <instance type="Text" uid="43">
                     <properties>
-                        <text>000000</text>
+                        <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Showcard Gothic,-80,400,1</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>

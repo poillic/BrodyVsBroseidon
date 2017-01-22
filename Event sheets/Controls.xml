@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Controls</name>
     <events>
+        <variable constant="0" name="score" sid="623060146118769" static="0" type="number">0</variable>
         <include>UI</include>
         <variable constant="0" name="rnd" sid="183455713100519" static="0" type="number">0</variable>
         <include>Spawner</include>

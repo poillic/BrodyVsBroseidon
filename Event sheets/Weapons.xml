@@ -45,6 +45,9 @@
                     <param id="1" name="Distance">50</param>
                 </action>
                 <action id="-9" name="Destroy" sid="324180628246627" type="Ammo" />
+                <action id="-16" name="Wait" sid="270382761486483" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="482116411551306">
@@ -57,6 +60,13 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="103349999852898" type="Enemies" />
+                        <action id="-9" name="Set value" sid="143775571013847" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">Enemies.Points + score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="957655619705954" type="Text">
+                            <param id="0" name="Text">score</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -124,9 +134,6 @@
                     <actions>
                         <action id="5" name="Set frame" sid="425430470563233" type="Castle">
                             <param id="0" name="Frame number">3</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="270382761486483" type="System">
-                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="737141242016255" type="System">
                             <param id="0" name="Layout">GameOver</param>
